@@ -14,6 +14,7 @@ def show():
     # print(descr)
     # total = int(split1[1]) + int(split1[2]) + int(split1[3])
     # print(split1[0], split1[1], split1[2], split1[3], total)
+    # adding comments
 
 
 show()
