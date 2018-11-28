@@ -1,0 +1,4 @@
+line = "this is line 1"
+line2 = "this is the second line"
+line3 = "here is another line"
+line4 = "yet another line!"

@@ -1,0 +1,151 @@
+# Hans Vos
+# 1003181
+# CS 10
+# Lab 2
+# Due Oct 14
+
+# 1.Write a program to determine whether a person is eligible (18 years old) to vote or not. If not eligible, display how many years are left to be eligible. (use if – else)
+age = int(input('Enter the age: '))
+
+if age <= 18:
+    print('You have to wait for another ' + str(18 - age) +' to cast your vote')
+# Enter the age: 10
+# You have to wait for another 8 to cast your vote
+
+# 2.Write a program to find whether the given number is even or odd. (use if – else)
+number = int(input('Enter any number: '))
+
+if number % 2 == 0:
+    print("{0} is Even".format(number))
+else:
+    print("{0} is Odd".format(number))
+# Enter any number: 125
+# 125 is Odd
+
+# 3.Write a program to determine whether the character entered is a vowel or not. (use if-elif-else)
+vowel = str(input('Enter any character: '))
+
+if(vowel == 'A' or vowel == 'a'):
+    print(vowel + ' is a vowel')
+elif(vowel == 'E' or vowel == 'e'):
+    print(vowel + ' is a vowel')
+elif(vowel == 'I' or vowel == 'i'):
+    print(vowel + ' is a vowel')
+elif(vowel == 'O' or vowel == 'o'):
+    print(vowel + ' is a vowel')
+elif(vowel == 'U' or vowel == 'u'):
+    print(vowel + ' is a vowel')
+else:
+    print(vowel + ' is not vowel')
+# Enter any character: h
+# h is not vowel
+# Enter any character: u
+# Hanss-MacBook-Pro:PythonIvcClass hansvos$ python lab2.py
+# Enter any character: s
+# s is not vowel
+# Enter any character: s
+# Hanss-MacBook-Pro:PythonIvcClass hansvos$ python lab2.py
+# Enter any character: s
+# s is not vowel
+# Hanss-MacBook-Pro:PythonIvcClass hansvos$ python lab2.py
+# Enter any character: A
+# A is a vowel
+# Hanss-MacBook-Pro:PythonIvcClass hansvos$ python lab2.py
+# Enter any character: a
+# a is a vowel
+
+# 4.Write a program to take single character input from the user and then check whether it is a number or a character.  If it is a character, determine whether it is in uppercase or lowercase. If it is a number display ‘A number was entered’.
+# character = input('Enter any character: ')
+# x = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'
+# sepChar = x.split(" ")
+# #print(sepChar)
+# if str(character) == sepChar:
+#     print('Uppercase character was entered')
+
+# 5.Write a program to print the number of horizontal asterisks * . User input an int number. (use while loop only)
+stars = int(input('How many stars you want? '))
+
+print('x'*stars)
+# How many stars you want? 20
+# xxxxxxxxxxxxxxxxxxxx
+
+# 6.Write a program to calculate the property tax.  User enters the lot number and property value.  Use while loop keep entering lot and calculate value until user enters a sentinel of 0 to end program. Tax factor is 0.0065. Property tax = property value X tax factor
+lotNumber = int(input('Enter the property lot number or enter -999 to end '))
+
+while lotNumber != -999:
+    print('Enter the lot number: ', lotNumber)
+    propertyValue = float(input('Enter property value: '))
+    print('Property tax: ${:,.2f}'.format(propertyValue * 0.0065))
+    lotNumber = int(input('Enter the property lot number or enter -999 to end'))
+
+# Enter the property lot number or enter -999 to end100
+# Enter the lot number:  100
+# Enter property value: 1000000.00
+# Property tax: $6,500.00
+# Enter the property lot number or enter -999 to end200
+# Enter the lot number:  200
+# Enter property value: 5000.00
+# Property tax: $32.50
+# Enter the property lot number or enter -999 to end-999
+
+# 7. Write a program using while loop with validation where user input wholesale prices to calculate retail prices. The markup is 2.5%. Validation is to check if a value is out of range and display a message to let the user know that the value entered is an error. In this case the wholesale value cannot be less than zero.
+cost = float(input("Enter the item's wholesale cost: " ))
+item = 'y'
+
+while item != 'n':
+    if cost < 0:
+        print('ERROR: the cannot be negative')
+        cost = float(input('Enter the correct wholesale cost: '))
+        print('Retail price is: ', cost*.025)
+    else:
+        print('Retail price is: ', cost*.025)
+    item = str(input('Do you have another item? (Enter y for yes): '))
+# Enter the item's wholesale cost: -.50
+# ERROR: the cannot be negative
+# Enter the correct wholesale cost: .50
+# Retail price is:  0.0125
+# Do you have another item? (Enter y for yes): n
+
+# 8. Write a for loop using range() function to print “Barzinger” 5 times.
+for times in range(5):
+    print('Barzinger')
+# Barzinger
+# Barzinger
+# Barzinger
+# Barzinger
+# Barzinger
+
+# 9.Write a program that uses a for loop to calculate the sum of integers.  The user will specify how many numbers to sum.
+numbers = int(input('How many numbers do you want to add? ' ))
+total = 0
+
+for num in range(numbers):
+    enterNumber = int(input('Enter number ' + str(num + 1) + ': ' ))
+    total += enterNumber
+
+print('The total is : ', total)
+# How many numbers do you want to add? 3
+# Enter number 1: 13
+# Enter number 2: 13
+# Enter number 3: 13
+# The total is :  39
+
+# 10.Write a program using for loop to convert speeds from 60kph through 130kph (in 10 kph increments) to mph. The formula: mph = kph * conversion factor where conversion factor is 0.6214.
+KPHlist = [60, 70, 80, 90, 100, 110, 120, 130]
+
+print('KPH  MPH')
+print('_________________________________________________________________________')
+
+for num in KPHlist:
+    print(num, format(num*0.6214, '.1f'))
+
+# KPH  MPH
+# _________________________________________________________________________
+# 60 37.3
+# 70 43.5
+# 80 49.7
+# 90 55.9
+# 100 62.1
+# 110 68.4
+# 120 74.6
+# 130 80.8

@@ -1,0 +1,70 @@
+# Hans Vos
+# 1003181
+# LAB 3
+# Due Oct 28
+
+# 1.Write a program with functions:
+# a.Create a function texas() where: -birds = 5000 -print the string Texas has 5000 birds
+# b.create a function California() where: -birds = 8000 -print the string California has 8000 birds
+# c.create a function main() to call the two functions -include doc strings
+def texas():
+    birds = 5000
+    print('Texas has ' + str(birds) + ' birds')
+
+def California():
+    birds = 8000
+    print('California has ' + str(birds) + ' birds')
+
+def main():
+    texas()
+    California()
+
+if __name__=="__main__":
+    main()
+
+# Texas has 5000 birds
+# California has 8000 birds
+
+# 2.a. Write a function show_interest() to take in 3 arguments principal, rate and periods.
+# -interest = principal * rate * periods
+# -print the following string The simple interest will be $1,000.00
+# b. write the main() function to call show_interest with the default arguments:
+# rate== 0.01, periods=10, principal = 10000.00
+
+def show_interest(principal, rate, periods):
+    print("The simple interest will be $" + format(principal * rate * periods,  ',.2f'))
+
+def main():
+    show_interest(rate= 0.01, periods=10, principal = 10000.00)
+
+if __name__=="__main__":
+    main()
+# The simple interest will be $1,000.00
+
+
+# 3.Write a program to find the area of a triangle using functions.
+# a.Write a function getData() for user to input the length and the perpendicular height of a triangle.
+# b.Write a function trigArea() to calculate the area of a triangle.
+# c.Write a function displayData() to print the length, height, and the area of a triangle;
+# d.Write the main() function to call getData(),call trigArea() and call displayData().
+
+def getData():
+    length = int(input('Input the length: '))
+    height = int(input('Input the height: '))
+    return height, length
+
+def trigArea(length, height)->(int, int):
+    return length * height
+
+def displayData():
+    print('Length: ' + length)
+    print('Height: ' + height)
+    print('Area: ' + trigArea(length, height))
+
+def main():
+    getData()
+    trigArea()
+    displayData()
+
+if __name__=="__main__":
+    main()
