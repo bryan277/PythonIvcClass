@@ -1,20 +1,27 @@
+#Hans Vos
+#1003181
+#CS 10 Tue Thur
+#DUE final exams
+
 
 def show():
 
     tea_file = open('tea.txt', 'r')
-    teaDict = {}
+    # teaDict = {}
     descr = tea_file.readlines()
-    for line in descr:
-        k, v = line.strip().split(':')
-        teaDict[k.strip()] = v.strip()
-
-    print(teaDict)
+    # for line in descr:
+    #     k, v = line.strip().split(':')
+    #     teaDict[k.strip()] = v.strip()
+    #
+    # print(teaDict)
     # split1 = descr.split(':')
+    for line in descr:
+        print(line)
     # print(split1)
     # print(descr)
     # total = int(split1[1]) + int(split1[2]) + int(split1[3])
     # print(split1[0], split1[1], split1[2], split1[3], total)
-    
+
 
 show()
 
