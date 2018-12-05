@@ -36,3 +36,5 @@
 # 2. half the list, compare the middle for a match
 # 3. no match is middle index value greater or less than the keys
 # 4. go the left or right and continue to half
+
+# test
