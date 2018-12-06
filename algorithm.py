@@ -38,3 +38,34 @@
 # 4. go the left or right and continue to half
 
 # test
+
+def bubblesort(lst):
+    for i in range(len(lst) - 1):
+        for j in range(len(lst) - 1):
+            if (lst[i] > lst[j]):
+                t = lst[j]
+                lst[j] = lst[j + 1]
+                lst[j + 1] = t
+    return lst
+
+
+def binarySearch(lst, key):
+    low = 0
+    high = len(lst) - 1
+    while high >= low:
+        mid = (low + high)/2
+        if key < lst[mid]
+            high = mid -1
+        elif key == lst[mid]
+            return 'found'
+        else:
+            low = mid + 1
+    return 'not found'
+
+def main():
+    lst + 1 = [11, 4, 7, 10, 2, 45, 50, 79, 60, 66, 69, 70, 59]
+    lst = bubblesort(lst+ 1)
+    print(lst)
+    print(binarySearch(lst, 11))
+
+main()
