@@ -23,18 +23,10 @@ print(df)
 # print('Amount paid for the stock:          $ ' + format(numberOfShares*purchasePrice, ',.2f'))
 
 
-
-# dictionary = {}
-# tea_file = open('tea.txt', 'r')
-# descr = tea_file.readline()
-#
-# for line in descr:
-#     if line != num:
-# print(descr)
-# split1 = descr.split(':')
-#
-# # print(descr)
-# # total = int(split1[1]) + int(split1[2]) + int(split1[3])
-# # print(split1[0], split1[1], split1[2], split1[3], total)
-# print(type(split1[1]))
-# print(split1[0] + '      ' + format(int(split1[1], ',.2f')))
+# Hanss-MacBook-Pro:homework5 hansvos$ python homework5p1.py
+#     tea_name  store1_Sales  store2_Sales  store3_Sales  total_sales
+# 0  Green Tea       8580.00       7201.25        8900.0     24681.25
+# 1  Earl Grey      10225.25       9025.00        9505.0     28755.25
+# 2     Ceylon       6700.10       5012.45        6011.0     17723.55
+# 3    Jasmine       9285.15       8276.10        8705.0     26266.25
+# 4   Mint Tea       7901.25       4267.00        7056.5     19224.75
