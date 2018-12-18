@@ -15,7 +15,7 @@ def main():
 
 main()
 
-
+# Hanss-MacBook-Pro:PythonIvcClass hansvos$ python homework5p2.py
 # enter a sentence to translate
 # r u, lol?
 # are
@@ -23,6 +23,8 @@ main()
 # , laughing out loud
 # ?
 
+
+# Hanss-MacBook-Pro:PythonIvcClass hansvos$ python homework5p2.py
 # enter a sentence to translate
 # r we bff?
 # are

@@ -1,25 +1,25 @@
 #Hans Vos
 #1003181
 #CS 10 Tue Thur
-#DUE final exams
+#DUE final exam
 import pandas as pd
 from io import StringIO
 
 # makes it easy to read globs of text like the data you posted above
-data = StringIO('''Green Tea:8580.0:7201.25:8900.0
+Tea_data = StringIO('''Green Tea:8580.0:7201.25:8900.0
 Earl Grey:10225.25:9025.0:9505.0
 Ceylon:6700.1:5012.45:6011.0
 Jasmine:9285.15:8276.1:8705.0
 Mint Tea:7901.25:4267.0:7056.5''')
 
-df = pd.read_csv(data, sep = ':', header = None)
+pdf = pd.read_csv(Tea_data, sep = ':', header = None)
 
 # returns a list of column names from the string you have above
-df.columns = "tea_name:store1_Sales:store2_Sales:store3_Sales".split(':')
+pdf.columns = "tea_name:store1_Sales:store2_Sales:store3_Sales".split(':')
 
 # add up the sales for stores 1, 2, and 3 for each type of tea to get total sales for a given tea
-df['total_sales'] = df[['store1_Sales', 'store2_Sales', 'store3_Sales']].sum(axis = 1)
-print(df)
+pdf['total_sales'] = pdf[['store1_Sales', 'store2_Sales', 'store3_Sales']].sum(axis = 1)
+print(pdf)
 # print('Amount paid for the stock:          $ ' + format(numberOfShares*purchasePrice, ',.2f'))
 
 
